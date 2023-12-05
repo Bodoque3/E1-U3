@@ -12,11 +12,11 @@ export class FormularioComponent implements OnInit {
   formulario:any;
   registro:any;
   registro_enviar = {
-    campo1:String,
-    campo2:String,
-    campo3:null,
-    campo4:String,
-    campo5:String
+    Nombre:String,
+    Apellido:String,
+    Rut:null,
+    Correo:String,
+    Password:String
   }
   registros:any;
   constructor(
@@ -25,11 +25,11 @@ export class FormularioComponent implements OnInit {
 
   ngOnInit(): void {
     this.formulario = this.fb.group({
-      campo1:['',[Validators.required]],
-      campo2:[''],
-      campo3:[''],
-      campo4:[''],
-      campo5:[''],
+      Nombre:['',[Validators.required]],
+      Apellido:[''],
+      Rut:[''],
+      Correo:[''],
+      Password:[''],
     });
   }
 
@@ -39,11 +39,11 @@ export class FormularioComponent implements OnInit {
   }
 
   botonEnviar(){
-    this.registro_enviar.campo1 = this.formularioReactivo.campo1.value
-    this.registro_enviar.campo2 = this.formularioReactivo.campo2.value
-    this.registro_enviar.campo3 = this.formularioReactivo.campo3.value
-    this.registro_enviar.campo4 = this.formularioReactivo.campo4.value
-    this.registro_enviar.campo5 = this.formularioReactivo.campo5.value
+    this.registro_enviar.Nombre = this.formularioReactivo.Nombre.value
+    this.registro_enviar.Apellido = this.formularioReactivo.Apellido.value
+    this.registro_enviar.Rut = this.formularioReactivo.Rut.value
+    this.registro_enviar.Correo = this.formularioReactivo.Correo.value
+    this.registro_enviar.Password = this.formularioReactivo.Password.value
 
 
     this.formularioSrv.crear_registro(this.registro_enviar).subscribe(
