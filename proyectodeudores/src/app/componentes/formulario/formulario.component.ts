@@ -14,7 +14,10 @@ export class FormularioComponent implements OnInit {
   registro_enviar = {
     Nombre:String,
     Apellido:String,
-    Rut:null,
+    Rut:{
+      type:String,
+      default:null
+    },
     Correo:String,
     Password:String
   }
