@@ -8,13 +8,17 @@ import { FormularioComponent } from './componentes/formulario/formulario.compone
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { HttpClientModule } from '@angular/common/http';
-import { EgresadoComponent } from './componentes/egresado/egresado.component'
+import { EgresadoComponent } from './componentes/egresado/egresado.component';
+import { VerUsuarioComponent } from './componentes/ver-usuario/ver-usuario.component';
+import { VerEgresoComponent } from './componentes/ver-egreso/ver-egreso.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
-    EgresadoComponent
+    EgresadoComponent,
+    VerUsuarioComponent,
+    VerEgresoComponent
   ],
   imports: [
     BrowserModule,

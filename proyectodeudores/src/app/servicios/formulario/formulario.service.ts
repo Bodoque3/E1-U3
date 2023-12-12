@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { environment } from '../../environments/environment.development'
+import { environment } from '../../../environments/environment.development'
 
 
 
@@ -17,7 +17,7 @@ export class FormularioService {
     return this.http.post(`${this.url_backend+'/crear-usuario' }`,datos)
   }
   obtener_registros(){
-    return this.http.get(`${this.url_backend+'/obtener-usuarios' }`)
+    return this.http.get(`${this.url_backend+'/ver-usuarios' }`)
 
   }
 }

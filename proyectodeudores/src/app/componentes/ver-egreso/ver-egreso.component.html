@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Egreso</title>
+</head>
+<body>
+    <div>
+        <form [formGroup]="veregreso">
+            <div>
+                <label>id_usuario</label>
+                <input type="text" id="" formControlName="id_usuario">
+            </div>
+
+            <button type="button" (click)="buscarusuario()">buscar usuario</button>
+            <button type="button" (click)="buscaregreso()"></button>
+        </form>
+    </div>
+</body>
+</html>
